@@ -6,7 +6,7 @@ def missingnums(NumArray):
     l1=[]
     #Sort the array in ascending order, and make all values unique using set function
     if len(NumArray)==0:
-        return 0
+        return '0-20'
     NumArray=list(set(NumArray))
     NumArray.sort()
     #EdgeCase to check if initial element of array is 0

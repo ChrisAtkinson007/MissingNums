@@ -1,4 +1,4 @@
-#Assumptions: Array of integers, N, where N<=20
+#Assumptions: Array of integers N, where 0<=N<=20
 array1=[0, 1, 2, 8, 12, 13]
 array2=[1, 2, 5, 12, 16]
 
@@ -18,14 +18,14 @@ def missingnums(NumArray):
     for i in range(0,len(NumArray)-1):
         if (NumArray[i+1]-NumArray[i])!=1:
             if (NumArray[i+1]-NumArray[i])==2:
-                l1.append(NumArray[i]+1)
+                l1.append(str(NumArray[i]+1))
             else:
                 l1.append(f'{NumArray[i]+1}-{NumArray[i+1]-1}')
 
     #Check if final element of array is 20, if not we add the final missing elements
     if NumArray[-1]!=20:
         if NumArray[-1]==19:
-            l1.append(20)
+            l1.append('20')
         else:
             l1.append(f'{NumArray[-1]+1}-20')
 
